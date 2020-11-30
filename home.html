@@ -1,0 +1,33 @@
+<html>
+<head>
+<h2>English to Hindi</h2>
+<style>
+body {
+  background-color: lightblue;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+p {
+  font-family: verdana;
+  font-size: 20px;
+}
+#main {
+    width : 500;
+    height : 400;}
+</style>
+</head>
+<body id = "main">
+  <form action="{{url_for('predict')}}" method = "POST">
+  <p>Enter the word in English:
+  <input type="text" name="fname"><br><br></p>
+  <input type="submit" value="Submit">
+</form>
+
+<p>{{prediction_text}}</p>
+
+</body>
+</html>
